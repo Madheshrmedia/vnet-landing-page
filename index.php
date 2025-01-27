@@ -123,6 +123,25 @@
             border-radius: 15px;
             border-color: transparent;
         }
+
+        .ab-ticon {
+            width: 25px;
+            height: 25px;
+        }
+
+        .why-rhead {
+            font-size: 25px;
+        }
+
+        .abt-card {
+            border-color: #009688;
+        }
+
+        .why-right {
+            font-size: 22px;
+            font-weight: 500;
+            color: #002A5C;
+        }
     </style>
 </head>
 
@@ -273,29 +292,84 @@
                             Why Choose Us?
                         </p>
                         <div class="row">
-                            <div class="col-md-6">
-                                <div class="card">
+                            <div class="col-md-6 mt-4">
+                                <div class="card abt-card">
                                     <div class="card-body">
                                         <h2 class="why-rhead">
                                             Expert Partnerships
                                         </h2>
 
-                                        <div class="why-rcont d-flex mb-3">
-                                            <img src="./image/ab-i.png" class="ab-icon" alt="vent">
-                                            <p class="why-pcont">
+                                        <div class="why-rcont d-flex mb-3 align-items-center">
+                                            <img src="./image/ab-t.png" class="ab-ticon" alt="vent">
+                                            <p class="why-pcont ps-3">
                                                 Collaborations with leading universities ensure high-quality education.
                                             </p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            <div class="col-md-6 mt-4">
+                                <div class="card abt-card">
+                                    <div class="card-body">
+                                        <h2 class="why-rhead">
+                                            Flexible Learning
+                                        </h2>
+
+                                        <div class="why-rcont d-flex mb-3 align-items-center">
+                                            <img src="./image/ab-t.png" class="ab-ticon" alt="vent">
+                                            <p class="why-pcont ps-3">
+                                                Online classes or self-study with online or offline examinations.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                </div>
+                            </div>
+                            <div class="col-md-6 mt-5">
+                                <div class="card abt-card">
+                                    <div class="card-body">
+                                        <h2 class="why-rhead">
+                                            Affordable Fees
+                                        </h2>
+
+                                        <div class="why-rcont d-flex mb-3 align-items-center">
+                                            <img src="./image/ab-t.png" class="ab-ticon" alt="vent">
+                                            <p class="why-pcont ps-3">
+                                                Transparent and competitive fee structures.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                </div>
+                            </div>
+                            <div class="col-md-6 mt-5">
+                                <div class="card abt-card">
+                                    <div class="card-body">
+                                        <h2 class="why-rhead">
+                                            Easy EMI Options
+                                        </h2>
+
+                                        <div class="why-rcont d-flex mb-3 align-items-center">
+                                            <img src="./image/ab-t.png" class="ab-ticon" alt="vent">
+                                            <p class="why-pcont ps-3">
+                                                Semester wise payments or monthly EMI options available.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- about us end -->
+            <!-- about us end -->
 
+        </div>
     </div>
 
     <!-- Bootstrap JS -->
