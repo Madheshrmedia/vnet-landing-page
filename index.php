@@ -142,6 +142,59 @@
             font-weight: 500;
             color: #002A5C;
         }
+
+        .co-topcent {
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+
+        .co-head {
+            color: #002A5C;
+        }
+
+        .co-container {
+            margin-top: 100px;
+        }
+
+        .co-slider {
+            margin-top: 50px;
+        }
+
+        .co-card {
+            border-radius: 15px;
+        }
+
+        .co-ticon {
+            width: 16px !important;
+        }
+
+        .co-btn {
+            background: #E3F2FD;
+            font-size: 16px;
+            border: 1px solid #009688;
+            /* Corrected this line */
+            border-radius: 16px;
+            padding: 5px 15px;
+        }
+
+        .co-card-body {
+            padding: 40px 30px 20px 30px;
+        }
+
+        .co-cardhead {
+            font-size: 24px;
+            color: #4CAF50;
+            margin-top: 15px;
+        }
+
+        .co-pcont {
+            margin-bottom: 0rem;
+            font-size: 16px;
+        }
+
+        .fl-container {
+            margin-top: 100px;
+        }
     </style>
 </head>
 
@@ -372,6 +425,426 @@
         </div>
     </div>
 
+    <!-- Courses Offered -->
+    <div class="container co-container">
+        <div class="row">
+            <div class="col-md-11 mx-auto">
+                <p class="co-topcent">
+                    Courses Offered
+                </p>
+
+                <h1 class="mt-4 co-head">
+                    Explore Our Courses
+                </h1>
+
+                <div class="row co-slider">
+                    <div class="col-md-12">
+                        <div class="swiper co-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide align-items-baseline">
+                                    <div class="card co-card">
+                                        <div class="card-body co-card-body text-start">
+                                            <button class="co-btn">
+                                                Duration: 3 years
+                                            </button>
+
+                                            <h3 class="co-cardhead mb-3">
+                                                Bachelor of Arts (BA)
+                                            </h3>
+
+                                            <div class="why-rcont d-flex mb-3 align-items-center">
+                                                <img src="./image/co-t.png" class="co-ticon" alt="vent">
+                                                <p class="co-pcont ps-3">
+                                                    Recognition- UGC & NAAC A*
+                                                </p>
+                                            </div>
+                                            <div class="why-rcont d-flex mb-3 align-items-center">
+                                                <img src="./image/co-t.png" class="co-ticon" alt="vent">
+                                                <p class="co-pcont ps-3">
+                                                    Learning Mode- Online classes/Self Study
+                                                </p>
+                                            </div>
+                                            <div class="why-rcont d-flex mb-3 align-items-center">
+                                                <img src="./image/co-t.png" class="co-ticon" alt="vent">
+                                                <p class="co-pcont ps-3">
+                                                    Exam Mode- Online/Offline
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide align-items-baseline">
+                                    <div class="card co-card">
+                                        <div class="card-body co-card-body text-start">
+                                            <button class="co-btn">
+                                                Duration: 3 years
+                                            </button>
+
+                                            <h3 class="co-cardhead mb-3">
+                                                Bachelor of Commerce (B.Com)
+                                            </h3>
+
+                                            <div class="why-rcont d-flex mb-3 align-items-center">
+                                                <img src="./image/co-t.png" class="co-ticon" alt="vent">
+                                                <p class="co-pcont ps-3">
+                                                    Recognition- UGC & NAAC A*
+                                                </p>
+                                            </div>
+                                            <div class="why-rcont d-flex mb-3 align-items-center">
+                                                <img src="./image/co-t.png" class="co-ticon" alt="vent">
+                                                <p class="co-pcont ps-3">
+                                                    Learning Mode- Online classes/Self Study
+                                                </p>
+                                            </div>
+                                            <div class="why-rcont d-flex mb-3 align-items-center">
+                                                <img src="./image/co-t.png" class="co-ticon" alt="vent">
+                                                <p class="co-pcont ps-3">
+                                                    Exam Mode- Online/Offline
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide align-items-baseline">
+                                    <div class="card co-card">
+                                        <div class="card-body co-card-body text-start">
+                                            <button class="co-btn">
+                                                Duration: 3 years
+                                            </button>
+
+                                            <h3 class="co-cardhead mb-3">
+                                                Bachelor of Business Administration (BBA)
+                                            </h3>
+
+                                            <div class="why-rcont d-flex mb-3 align-items-center">
+                                                <img src="./image/co-t.png" class="co-ticon" alt="vent">
+                                                <p class="co-pcont ps-3">
+                                                    Recognition- UGC & NAAC A*
+                                                </p>
+                                            </div>
+                                            <div class="why-rcont d-flex mb-3 align-items-center">
+                                                <img src="./image/co-t.png" class="co-ticon" alt="vent">
+                                                <p class="co-pcont ps-3">
+                                                    Learning Mode- Online classes/Self Study
+                                                </p>
+                                            </div>
+                                            <div class="why-rcont d-flex mb-3 align-items-center">
+                                                <img src="./image/co-t.png" class="co-ticon" alt="vent">
+                                                <p class="co-pcont ps-3">
+                                                    Exam Mode- Online/Offline
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide align-items-baseline">
+                                    <div class="card co-card">
+                                        <div class="card-body co-card-body text-start">
+                                            <button class="co-btn">
+                                                Duration: 3 years
+                                            </button>
+
+                                            <h3 class="co-cardhead mb-3">
+                                                Bachelor of Science (B.Sc)
+                                            </h3>
+
+                                            <div class="why-rcont d-flex mb-3 align-items-center">
+                                                <img src="./image/co-t.png" class="co-ticon" alt="vent">
+                                                <p class="co-pcont ps-3">
+                                                    Recognition- UGC & NAAC A*
+                                                </p>
+                                            </div>
+                                            <div class="why-rcont d-flex mb-3 align-items-center">
+                                                <img src="./image/co-t.png" class="co-ticon" alt="vent">
+                                                <p class="co-pcont ps-3">
+                                                    Learning Mode- Self Study
+                                                </p>
+                                            </div>
+                                            <div class="why-rcont d-flex mb-3 align-items-center">
+                                                <img src="./image/co-t.png" class="co-ticon" alt="vent">
+                                                <p class="co-pcont ps-3">
+                                                    Exam Mode- Online/Offline
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide align-items-baseline">
+                                    <div class="card co-card">
+                                        <div class="card-body co-card-body text-start">
+                                            <button class="co-btn">
+                                                Duration: 3 years
+                                            </button>
+
+                                            <h3 class="co-cardhead mb-3">
+                                                Bachelor of Computer Applications (BCA)
+                                            </h3>
+
+                                            <div class="why-rcont d-flex mb-3 align-items-center">
+                                                <img src="./image/co-t.png" class="co-ticon" alt="vent">
+                                                <p class="co-pcont ps-3">
+                                                    Recognition- UGC & NAAC A*
+                                                </p>
+                                            </div>
+                                            <div class="why-rcont d-flex mb-3 align-items-center">
+                                                <img src="./image/co-t.png" class="co-ticon" alt="vent">
+                                                <p class="co-pcont ps-3">
+                                                    Learning Mode- Online classes/Self Study
+                                                </p>
+                                            </div>
+                                            <div class="why-rcont d-flex mb-3 align-items-center">
+                                                <img src="./image/co-t.png" class="co-ticon" alt="vent">
+                                                <p class="co-pcont ps-3">
+                                                    Exam Mode- Online/Offline
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide align-items-baseline">
+                                    <div class="card co-card">
+                                        <div class="card-body co-card-body text-start">
+                                            <button class="co-btn">
+                                                Duration: 2 years
+                                            </button>
+
+                                            <h3 class="co-cardhead mb-3">
+                                                Master of Arts (MA)
+                                            </h3>
+
+                                            <div class="why-rcont d-flex mb-3 align-items-center">
+                                                <img src="./image/co-t.png" class="co-ticon" alt="vent">
+                                                <p class="co-pcont ps-3">
+                                                    Recognition- UGC & NAAC A*
+                                                </p>
+                                            </div>
+                                            <div class="why-rcont d-flex mb-3 align-items-center">
+                                                <img src="./image/co-t.png" class="co-ticon" alt="vent">
+                                                <p class="co-pcont ps-3">
+                                                    Learning Mode- Online classes/Self Study
+                                                </p>
+                                            </div>
+                                            <div class="why-rcont d-flex mb-3 align-items-center">
+                                                <img src="./image/co-t.png" class="co-ticon" alt="vent">
+                                                <p class="co-pcont ps-3">
+                                                    Exam Mode- Online/Offline
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide align-items-baseline">
+                                    <div class="card co-card">
+                                        <div class="card-body co-card-body text-start">
+                                            <button class="co-btn">
+                                                Duration: 2 years
+                                            </button>
+
+                                            <h3 class="co-cardhead mb-3">
+                                                Master of Commerce (M.Com)
+                                            </h3>
+
+                                            <div class="why-rcont d-flex mb-3 align-items-center">
+                                                <img src="./image/co-t.png" class="co-ticon" alt="vent">
+                                                <p class="co-pcont ps-3">
+                                                    Recognition- UGC & NAAC A*
+                                                </p>
+                                            </div>
+                                            <div class="why-rcont d-flex mb-3 align-items-center">
+                                                <img src="./image/co-t.png" class="co-ticon" alt="vent">
+                                                <p class="co-pcont ps-3">
+                                                    Learning Mode- Online classes/Self Study
+                                                </p>
+                                            </div>
+                                            <div class="why-rcont d-flex mb-3 align-items-center">
+                                                <img src="./image/co-t.png" class="co-ticon" alt="vent">
+                                                <p class="co-pcont ps-3">
+                                                    Exam Mode- Online/Offline
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide align-items-baseline">
+                                    <div class="card co-card">
+                                        <div class="card-body co-card-body text-start">
+                                            <button class="co-btn">
+                                                Duration: 2 years
+                                            </button>
+
+                                            <h3 class="co-cardhead mb-3">
+                                                Master of Business Administration (MBA)
+                                            </h3>
+
+                                            <div class="why-rcont d-flex mb-3 align-items-center">
+                                                <img src="./image/co-t.png" class="co-ticon" alt="vent">
+                                                <p class="co-pcont ps-3">
+                                                    Recognition- UGC & NAAC A*
+                                                </p>
+                                            </div>
+                                            <div class="why-rcont d-flex mb-3 align-items-center">
+                                                <img src="./image/co-t.png" class="co-ticon" alt="vent">
+                                                <p class="co-pcont ps-3">
+                                                    Learning Mode- Online classes/Self Study
+                                                </p>
+                                            </div>
+                                            <div class="why-rcont d-flex mb-3 align-items-center">
+                                                <img src="./image/co-t.png" class="co-ticon" alt="vent">
+                                                <p class="co-pcont ps-3">
+                                                    Exam Mode- Online/Offline
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide align-items-baseline">
+                                    <div class="card co-card">
+                                        <div class="card-body co-card-body text-start">
+                                            <button class="co-btn">
+                                                Duration: 2 years
+                                            </button>
+
+                                            <h3 class="co-cardhead mb-3">
+                                                Master of Science (M.Sc)
+                                            </h3>
+
+                                            <div class="why-rcont d-flex mb-3 align-items-center">
+                                                <img src="./image/co-t.png" class="co-ticon" alt="vent">
+                                                <p class="co-pcont ps-3">
+                                                    Recognition- UGC & NAAC A*
+                                                </p>
+                                            </div>
+                                            <div class="why-rcont d-flex mb-3 align-items-center">
+                                                <img src="./image/co-t.png" class="co-ticon" alt="vent">
+                                                <p class="co-pcont ps-3">
+                                                    Learning Mode- Self Study
+                                                </p>
+                                            </div>
+                                            <div class="why-rcont d-flex mb-3 align-items-center">
+                                                <img src="./image/co-t.png" class="co-ticon" alt="vent">
+                                                <p class="co-pcont ps-3">
+                                                    Exam Mode- Online/Offline
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide align-items-baseline">
+                                    <div class="card co-card">
+                                        <div class="card-body co-card-body text-start">
+                                            <button class="co-btn">
+                                                Duration: 2 years
+                                            </button>
+
+                                            <h3 class="co-cardhead mb-3">
+                                                Master of Computer Applications (MCA)
+                                            </h3>
+
+                                            <div class="why-rcont d-flex mb-3 align-items-center">
+                                                <img src="./image/co-t.png" class="co-ticon" alt="vent">
+                                                <p class="co-pcont ps-3">
+                                                    Recognition- UGC & NAAC A*
+                                                </p>
+                                            </div>
+                                            <div class="why-rcont d-flex mb-3 align-items-center">
+                                                <img src="./image/co-t.png" class="co-ticon" alt="vent">
+                                                <p class="co-pcont ps-3">
+                                                    Learning Mode- Online classes/Self Study
+                                                </p>
+                                            </div>
+                                            <div class="why-rcont d-flex mb-3 align-items-center">
+                                                <img src="./image/co-t.png" class="co-ticon" alt="vent">
+                                                <p class="co-pcont ps-3">
+                                                    Exam Mode- Online/Offline
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide align-items-baseline">
+                                    <div class="card co-card">
+                                        <div class="card-body co-card-body text-start">
+                                            <button class="co-btn">
+                                                Duration: 2 years
+                                            </button>
+
+                                            <h3 class="co-cardhead mb-3">
+                                                Master of Social Work (MSW)
+                                            </h3>
+
+                                            <div class="why-rcont d-flex mb-3 align-items-center">
+                                                <img src="./image/co-t.png" class="co-ticon" alt="vent">
+                                                <p class="co-pcont ps-3">
+                                                    Recognition- UGC & NAAC A*
+                                                </p>
+                                            </div>
+                                            <div class="why-rcont d-flex mb-3 align-items-center">
+                                                <img src="./image/co-t.png" class="co-ticon" alt="vent">
+                                                <p class="co-pcont ps-3">
+                                                    Learning Mode- Online classes/Self Study
+                                                </p>
+                                            </div>
+                                            <div class="why-rcont d-flex mb-3 align-items-center">
+                                                <img src="./image/co-t.png" class="co-ticon" alt="vent">
+                                                <p class="co-pcont ps-3">
+                                                    Exam Mode- Online/Offline
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide align-items-baseline">
+                                    <div class="card co-card">
+                                        <div class="card-body co-card-body text-start">
+                                            <button class="co-btn">
+                                                Duration: 6 months
+                                            </button>
+
+                                            <h3 class="co-cardhead mb-3">
+                                                10th & 12th (SSLC & PUC- NIOS)
+                                            </h3>
+
+                                            <div class="why-rcont d-flex mb-3 align-items-center">
+                                                <img src="./image/co-t.png" class="co-ticon" alt="vent">
+                                                <p class="co-pcont ps-3">
+                                                    Recognition- Open Schooling
+                                                </p>
+                                            </div>
+                                            <div class="why-rcont d-flex mb-3 align-items-center">
+                                                <img src="./image/co-t.png" class="co-ticon" alt="vent">
+                                                <p class="co-pcont ps-3">
+                                                    Learning Mode- Self Study
+                                                </p>
+                                            </div>
+                                            <div class="why-rcont d-flex mb-3 align-items-center">
+                                                <img src="./image/co-t.png" class="co-ticon" alt="vent">
+                                                <p class="co-pcont ps-3">
+                                                    Exam Mode- Offline
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end Courses Offered -->
+
+    <!-- Flexible Learning frame -->
+    <div class="container fl-container">
+        <div class="row">
+            <div class="col-md-11 mx-auto">
+                <img src="./image/fl-bg.webp" class="img-fluid" alt="vnet">
+            </div>
+        </div>
+    </div>
+    <!-- end Flexible Learning -->
+
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
@@ -594,6 +1067,17 @@
                 delay: 8000, // 8 seconds
                 disableOnInteraction: false, // Continue autoplay after user interaction
             },
+        });
+
+        var swiper = new Swiper(".co-swiper", {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            loop: true,
+            // autoplay: {
+            //     delay: 4000, // 8 seconds
+            //     disableOnInteraction: false, // Continue autoplay after user interaction
+            // },
+
         });
     </script>
 
