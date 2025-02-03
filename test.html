@@ -15,45 +15,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css">
-    <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $course = $_POST['course'];
-    $email = $_POST['email1'];
-    $phone = $_POST['phone1'];
-
-    $to = "muthubala.rmedia1123@gmail.com";  // Change to your desired recipient email
-    $subject = "New Course Inquiry";
-    $message = "Course: $course\nEmail: $email\nPhone: $phone";
-    $headers = "From: no-reply@example.com"; // Change to your domain email
-
-    if (mail($to, $subject, $message, $headers)) {
-        echo "success";
-    } else {
-        echo "error";
-    }
-}
-?>
-<?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $email = $_POST['email'];
-    $phone = $_POST['phone'];
-    $address = $_POST['address'];
-    $comment = $_POST['comment'];
-
-    $to = "recipient@example.com";  // Change to your email
-    $subject = "New Inquiry from Contact Form";
-    $message = "Email: $email\nPhone: $phone\nAddress: $address\nComment: $comment";
-    $headers = "From: no-reply@example.com"; // Change to your domain email
-
-    if (mail($to, $subject, $message, $headers)) {
-        echo "success";
-    } else {
-        echo "error";
-    }
-}
-?>
-
-
     <style>
 
 .values-slider{
@@ -1099,8 +1060,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             contact@vneteducation.com
                             </p>
 
-                            <div class="map-container">
-        <iframe  style="width:100%"
+                            <!-- <div class="map-container">
+        <iframe 
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.005612494828!2d77.63524547454564!3d12.907360416284465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae14914a64cf51%3A0x5142e68feee0c831!2sVincerenet%20Solutions%20(Vnet)!5e0!3m2!1sen!2sin!4v1738561482502!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" 
             width="50%" 
             height="300" 
@@ -1108,7 +1069,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             allowfullscreen="" 
             loading="lazy">
         </iframe>
-    </div>
+    </div> -->
     </div>
     <div class="col-md-7 col-sm-12" id="contactform">
         <h4 style=" text-transform: uppercase;margin-bottom: 2rem;">Contact Form</h4>
@@ -1241,13 +1202,13 @@ textarea.form-control{
 			<div class="row">
 				<div class="col-md-6">
 					<div class="form-group">
-						<label id="email-label " for="name">Your Email</label>
+						<label id="name-label" for="name">Your Email</label>
 						<input type="email" name="email" id="email" placeholder="Your Email" class="form-control" >
 					</div>
 				</div>
 				<div class="col-md-6">
 					<div class="form-group">
-						<label id="name-label" for="phone">Your Phone</label>
+						<label id="email-label" for="email">Your Phone</label>
 						<input type="number" name="phone" id="phone" placeholder="Your Phone" class="form-control" >
 					</div>
 				</div>
@@ -1256,7 +1217,7 @@ textarea.form-control{
 			<div class="row">
 				<div class="col-md-12">
 					<div class="form-group">
-						<label id="address-label" for="address">Your Address</label>
+						<label id="number-label" for="number">Your Address</label>
 						<input type="text" name="address" id="address" class="form-control" >
 					</div>
 				</div>
@@ -1281,34 +1242,8 @@ textarea.form-control{
 			</div>
 
 		</form>
-        <p id="success-message" style="display:none;color:green;">Email Sent Successfully!</p>
-<p id="error-message" style="display:none;color:red;">Failed to send email.</p>
 	</div>	
 </div>
-<script>
-document.getElementById("survey-form").addEventListener("submit", function(event) {
-    event.preventDefault();
-
-    let formData = new FormData(this);
-
-    fetch("send-email2.php", {
-        method: "POST",
-        body: formData
-    })
-    .then(response => response.text())
-    .then(data => {
-        if (data.trim() === "success") {
-            document.getElementById("success-message").style.display = "block";
-            document.getElementById("error-message").style.display = "none";
-            document.getElementById("survey-form").reset();
-        } else {
-            document.getElementById("error-message").style.display = "block";
-            document.getElementById("success-message").style.display = "none";
-        }
-    })
-    .catch(error => console.error("Error:", error));
-});
-</script>
 
                 <!-- ----------------------- -->
 
@@ -1339,7 +1274,7 @@ document.getElementById("survey-form").addEventListener("submit", function(event
                 Easy and Secure Payments
                 </h1>
                 <div class="payment">
-		<form id="survey-forms">
+		<form id="survey-form">
         <div class="row">
 				<div class="col-md-12 col-sm-12">
 					<div class="form-group">
@@ -1354,14 +1289,14 @@ document.getElementById("survey-form").addEventListener("submit", function(event
 				<div class="col-md-6">
                     
 					<div class="form-group">
-						<label id="name-label" for="email1">Your Email</label>
-						<input type="email1" name="email1" id="email1" placeholder="Your Email" class="form-control" style="border-radius: 5px">
+						<label id="name-label" for="name">Your Email</label>
+						<input type="email" name="email" id="email" placeholder="Your Email" class="form-control" style="border-radius: 5px">
 					</div>
 				</div>
 				<div class="col-md-6">
 					<div class="form-group">
-						<label id="email-label" for="phone1">Your Phone</label>
-						<input type="number" name="phone1" id="phone1" placeholder="Your Phone" class="form-control"  style="border-radius: 5px">
+						<label id="email-label" for="email">Your Phone</label>
+						<input type="number" name="phone" id="phone" placeholder="Your Phone" class="form-control"  style="border-radius: 5px">
 					</div>
 				</div>
 			</div>
@@ -1390,8 +1325,7 @@ document.getElementById("survey-form").addEventListener("submit", function(event
 					<button type="submit" id="submits" class="btn btn-primary btn-block">Send</button>
 				</div>
 			</div>
-            <p id="success-message1" style="display:none;color:green;">Email Sent Successfully!</p>
-            <p id="error-message1" style="display:none;color:red;">Failed to send email.</p>
+
 		</form>
 	</div>	
             </div>
@@ -1475,7 +1409,7 @@ border-radius:6px !important;
             }
 
             .footer-maincard {
-                margin-top: 17rem;
+                margin-top: 12rem;
                 background-color: #000000;
             }
 
@@ -1626,11 +1560,6 @@ border-radius:6px !important;
                                     justify-content: center;
                                 }
                             }
-                            @media screen and (max-width:768px) {
-                               .footer-maincard {
-                                margin-top: 25rem;
-                                }
-                            }
                         </style>
 
                     </div>
@@ -1733,29 +1662,6 @@ $('.owl-carousel').owlCarousel({
 
 });
     </script>
-<script>
-document.getElementById("survey-forms").addEventListener("submit", function(event) {
-    event.preventDefault();
 
-    let formData = new FormData(this);
-
-    fetch("send-email.php", {
-        method: "POST",
-        body: formData
-    })
-    .then(response => response.text())
-    .then(data => {
-        if (data.trim() === "success") {
-            document.getElementById("success-message1").style.display = "block";
-            document.getElementById("error-message1").style.display = "none";
-            document.getElementById("survey-forms").reset();
-        } else {
-            document.getElementById("error-message1").style.display = "block";
-            document.getElementById("success-message1").style.display = "none";
-        }
-    })
-    .catch(error => console.error("Error:", error));
-});
-</script>
 </body>
 </html>
