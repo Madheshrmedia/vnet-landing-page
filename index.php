@@ -1512,7 +1512,7 @@ $(document).ready(function(){
                         Easy and Secure Payments
                     </h1>
                     <div class="payment">
-                        <form  id="survey-forms">
+                        <form  action="sendmail.php" method="post" enctype="multipart/form-data" id="survey-forms">
                             <div class="row">
                                 <div class="col-md-12 col-sm-12">
                                     <div class="form-group">
@@ -1556,7 +1556,7 @@ $(document).ready(function(){
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label id="file-label" for="doc">Upload Payment Proof (Screenshot)</label>
-                                        <input type="file" name="doc" id="doc" class="form-control"
+                                        <input  type="file" name="file" id="file" class="form-control"
                                             style="border-radius: 5px">
                                     </div>
                                 </div>
@@ -1958,29 +1958,7 @@ $(document).ready(function(){
     });
 });
 </script>
-<script>
-$(document).ready(function(){
-    $("#survey-forms").submit(function(e){
-        e.preventDefault(); // Prevent form from reloading the page
-        console.log("Form Data:", $(this).serialize());
-        $.ajax({
-            type: "POST",
-            url: "sendmail.php", // The PHP file to handle the email sending
-            data: $(this).serialize(),
-            success: function(response) {
-                if(response.includes("success")){
-                    $("#success-message1").show();
-                    $("#error-message1").hide();
-                    $("#survey-forms")[0].reset();
-                } else {
-                    $("#error-message1").show();
-                    $("#success-message1").hide();
-                }
-            }
-        });
-    });
-});
-</script>
+
 </body>
 
 </html>
