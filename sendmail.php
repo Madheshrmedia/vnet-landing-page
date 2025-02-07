@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 
     // Validate form inputs
-    if (empty($_POST['name']) || empty($_POST['email1']) || empty($_POST['phone1'])|| empty($_POST['course'])) {
+   if (empty($_POST['name']) || empty($_POST['email1']) || empty($_POST['phone1'])|| empty($_POST['course'])) {
         die("Error: All fields are required.");
     }
 
@@ -30,9 +30,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 
     // Email content
-    $message = "Name: $name\r\nEmail: $email\r\nPhone: $phone\r\nCourse: $course\r\n";
+    $message = "Name: $name\r\nEmail: $email\r\n\Phone: $phone\r\n\Course: $course\r\n";
 
-    $subject = "Payment form submission";
+       $subject = "Payment form submission";
     $fromname = "Vnet";
     $fromemail = "noreply@iyersrecipe.in";  // Replace with your domain email
     $mailto = "muthubala894@gmail.com";  // Replace with recipient email
@@ -55,11 +55,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $headers .= "Content-Transfer-Encoding: 7bit" . $eol;
     $headers .= "This is a MIME encoded message." . $eol;
 
-    // Message body
-    $body = "--$separator" . $eol;
-    $body .= "Content-Type: text/plain; charset=\"UTF-8\"" . $eol;
-    $body .= "Content-Transfer-Encoding: 8bit" . $eol;
-    $body .= $message . $eol;
+ // Message body
+$body = "--$separator" . $eol;
+$body .= "Content-Type: text/plain; charset=\"UTF-8\"" . $eol;
+$body .= "Content-Transfer-Encoding: 8bit" . $eol . $eol;
+$body .= $message . $eol . $eol;  // Ensure proper line breaks
 
     // Attachment
     $body .= "--$separator" . $eol;
