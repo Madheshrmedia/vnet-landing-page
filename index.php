@@ -18,24 +18,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css">
 
     <link rel="icon" type="image/png" href="/image/favicon.png">
-    <?php
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $course = $_POST['course'];
-        $email = $_POST['email1'];
-        $phone = $_POST['phone1'];
-
-        $to = "muthubala.rmedia1123@gmail.com";  // Change to your desired recipient email
-        $subject = "New Course Inquiry";
-        $message = "Course: $course\nEmail: $email\nPhone: $phone";
-        $headers = "From: no-reply@example.com"; // Change to your domain email
-    
-        if (mail($to, $subject, $message, $headers)) {
-            echo "success";
-        } else {
-            echo "error";
-        }
-    }
-    ?>
+  
 
 
 
@@ -1427,83 +1410,78 @@
                     </style>
                     <div class="container">
 
-                        <div class="form-wrap">
-                            <form id="survey-form">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label id="email-label " for="name">Your Email</label>
-                                            <input type="email" name="email" id="email" placeholder="Your Email"
-                                                class="form-control">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label id="name-label" for="phone">Your Phone</label>
-                                            <input type="number" name="phone" id="phone" placeholder="Your Phone"
-                                                class="form-control">
-                                        </div>
-                                    </div>
-                                </div>
+                    
+                    <div class="form-wrap">
+    <form id="survey-form">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" name="email" id="email" placeholder="Your Email" class="form-control" required>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="phone">Your Phone</label>
+                    <input type="number" name="phone" id="phone" placeholder="Your Phone" class="form-control" required>
+                </div>
+            </div>
+        </div>
 
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <label id="address-label" for="address">Your Address</label>
-                                            <input type="text" name="address" id="address" class="form-control">
-                                        </div>
-                                    </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="address">Your Address</label>
+                    <input type="text" name="address" id="address" class="form-control" required>
+                </div>
+            </div>
+        </div>
 
-                                </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label>Interested Course</label>
+                    <textarea id="comments" class="form-control" name="comment" placeholder="Enter your comment here..." required></textarea>
+                </div>
+            </div>
+        </div>
 
-
-
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <label>Interested Course</label>
-                                            <textarea id="comments" class="form-control" name="comment"
-                                                placeholder="Enter your comment here..."></textarea>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-md-12 address">
-                                        <button type="submit" id="submit" class="btn btn-primary btn-block">Send
-                                            Message</button>
-                                    </div>
-                                </div>
-
-                            </form>
-                            <p id="success-message" style="display:none;color:green;">Email Sent Successfully!</p>
-                            <p id="error-message" style="display:none;color:red;">Failed to send email.</p>
-                        </div>
+        <div class="row">
+            <div class="col-md-12 address">
+                <button type="submit" id="submit" class="btn btn-primary btn-block">Send Message</button>
+            </div>
+        </div>
+    </form>
+    
+    <p id="success-message" style="display:none;color:green;">Email Sent Successfully!</p>
+    <p id="error-message" style="display:none;color:red;">Failed to send email.</p>
+</div>
                     </div>
-                    <script>
-                        document.getElementById("survey-form").addEventListener("submit", function (event) {
-                            event.preventDefault();
-
-                            let formData = new FormData(this);
-
-                            fetch("send-email2.php", {
-                                method: "POST",
-                                body: formData
-                            })
-                                .then(response => response.text())
-                                .then(data => {
-                                    if (data.trim() === "success") {
-                                        document.getElementById("success-message").style.display = "block";
-                                        document.getElementById("error-message").style.display = "none";
-                                        document.getElementById("survey-form").reset();
-                                    } else {
-                                        document.getElementById("error-message").style.display = "block";
-                                        document.getElementById("success-message").style.display = "none";
-                                    }
-                                })
-                                .catch(error => console.error("Error:", error));
-                        });
-                    </script>
+                 
+                    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#survey-form").submit(function(e){
+        e.preventDefault(); // Prevent form from reloading the page
+        
+        $.ajax({
+            type: "POST",
+            url: "send_mail.php", // The PHP file to handle the email sending
+            data: $(this).serialize(),
+            success: function(response) {
+                if(response.includes("success")){
+                    $("#success-message").show();
+                    $("#error-message").hide();
+                    $("#survey-form")[0].reset();
+                } else {
+                    $("#error-message").show();
+                    $("#success-message").hide();
+                }
+            }
+        });
+    });
+});
+</script>
 
                     <!-- ----------------------- -->
 
@@ -1534,11 +1512,11 @@
                         Easy and Secure Payments
                     </h1>
                     <div class="payment">
-                        <form method="POST" enctype="multipart/form-data" id="survey-forms">
+                        <form  id="survey-forms">
                             <div class="row">
                                 <div class="col-md-12 col-sm-12">
                                     <div class="form-group">
-                                        <label id="name" for="name">Name</label>
+                                        <label id="name-label" for="name">Name</label>
                                         <input type="text" name="name" id="name" class="form-control"
                                             style="border-radius: 5px">
                                     </div>
@@ -1550,14 +1528,14 @@
                                 <div class="col-md-6">
 
                                     <div class="form-group">
-                                        <label id="name-label" for="email1">Your Email ID</label>
+                                        <label id="email-label" for="email1">Your Email ID</label>
                                         <input type="email1" name="email1" id="email1" placeholder="Your Email"
                                             class="form-control" style="border-radius: 5px">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label id="email-label" for="phone1">Your Phone</label>
+                                        <label id="phone-label" for="phone1">Your Phone</label>
                                         <input type="number" name="phone1" id="phone1" placeholder="Your Phone"
                                             class="form-control" style="border-radius: 5px">
                                     </div>
@@ -1567,7 +1545,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label id="number-label" for="course">Course</label>
+                                        <label id="course-label" for="course">Course</label>
                                         <input type="text" name="course" id="course" class="form-control"
                                             style="border-radius: 5px">
                                     </div>
@@ -1577,7 +1555,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label id="number-label" for="doc">Upload Payment Proof (Screenshot)</label>
+                                        <label id="file-label" for="doc">Upload Payment Proof (Screenshot)</label>
                                         <input type="file" name="doc" id="doc" class="form-control"
                                             style="border-radius: 5px">
                                     </div>
@@ -1956,55 +1934,53 @@
         });
 
     </script>
-    <script>
-        document.getElementById("survey-forms").addEventListener("submit", function (e) {
-            e.preventDefault();
-
-            let formData = new FormData(this);
-
-            fetch("send_mail.php", {
-                method: "POST",
-                body: formData
-            })
-                .then(response => response.text())
-                .then(data => {
-                    if (data.trim() === "success") {
-                        document.getElementById("success-message1").style.display = "block";
-                        document.getElementById("error-message1").style.display = "none";
-                        document.getElementById("survey-forms").reset();
-                    } else {
-                        document.getElementById("error-message1").style.display = "block";
-                        document.getElementById("success-message1").style.display = "none";
-                    }
-                })
-                .catch(error => console.error("Error:", error));
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#survey-form").submit(function(e){
+        e.preventDefault(); // Prevent form from reloading the page
+        console.log("Form Data:", $(this).serialize());
+        $.ajax({
+            type: "POST",
+            url: "send_mail.php", // The PHP file to handle the email sending
+            data: $(this).serialize(),
+            success: function(response) {
+                if(response.includes("success")){
+                    $("#success-message").show();
+                    $("#error-message").hide();
+                    $("#survey-form")[0].reset();
+                } else {
+                    $("#error-message").show();
+                    $("#success-message").hide();
+                }
+            }
         });
-
-        document.getElementById("survey-form").addEventListener("submit", function (e) {
-            e.preventDefault();
-
-            let formData = new FormData(this);
-
-            fetch("sendmail.php", {
-                method: "POST",
-                body: formData
-            })
-                .then(response => response.text())
-                .then(data => {
-                    if (data.trim() === "success") {
-                        document.getElementById("success-message").style.display = "block";
-                        document.getElementById("error-message").style.display = "none";
-                        document.getElementById("survey-form").reset();
-                    } else {
-                        document.getElementById("error-message").style.display = "block";
-                        document.getElementById("success-message").style.display = "none";
-                    }
-                })
-                .catch(error => console.error("Error:", error));
+    });
+});
+</script>
+<script>
+$(document).ready(function(){
+    $("#survey-forms").submit(function(e){
+        e.preventDefault(); // Prevent form from reloading the page
+        console.log("Form Data:", $(this).serialize());
+        $.ajax({
+            type: "POST",
+            url: "sendmail.php", // The PHP file to handle the email sending
+            data: $(this).serialize(),
+            success: function(response) {
+                if(response.includes("success")){
+                    $("#success-message1").show();
+                    $("#error-message1").hide();
+                    $("#survey-forms")[0].reset();
+                } else {
+                    $("#error-message1").show();
+                    $("#success-message1").hide();
+                }
+            }
         });
-
-
-    </script>
+    });
+});
+</script>
 </body>
 
 </html>
