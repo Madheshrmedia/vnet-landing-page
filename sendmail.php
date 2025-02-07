@@ -32,8 +32,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Email content
     $message = "Name: $name\r\nEmail: $email\r\nPhone: $phone\r\nCourse: $course\r\n";
 
-    $subject = "My email subject";
-    $fromname = "My Website Name";
+    $subject = "Payment form submission";
+    $fromname = "Vnet";
     $fromemail = "noreply@iyersrecipe.in";  // Replace with your domain email
     $mailto = "muthubala894@gmail.com";  // Replace with recipient email
 
